@@ -502,7 +502,7 @@
     <div class="clearfix"></div>
 </div>
 [[!FormIt?
-&hooks=`spam,email,redirect`
+&hooks=`spam,recaptchav2,email,redirect`
 &spamEmailFields=`email`
 &redirectTo=`[[*id]]`
 &redirectParams=`{"email":"1"}`
@@ -534,6 +534,11 @@
                 <div class="clearfix"></div>
                 <div class="styled-input">
                     <textarea name="message" placeholder="Správa" required=""></textarea>
+                </div>
+                <div class="clearfix"></div>
+                <div>
+                    [[!+fi.error.recaptchav2_error]]
+                    [[!recaptchav2_render]]
                 </div>
                 <div>
                     <div class="click">
